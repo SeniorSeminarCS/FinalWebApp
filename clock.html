@@ -1,0 +1,280 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Clock</title>
+
+<link rel="stylesheet" type="text/css" href="style-small.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+	<body> 
+
+		<div id="container">
+			
+			<a href="clock.html">
+				<div id="clock">
+					<div class="icon">
+						<div class="clock">
+							<div class="circle"></div>
+							<div class="clockwise"></div>
+							<div class="shadows"></div>
+	    				</div>
+	  				</div>
+  				</div>
+  			</a>
+  			
+  			
+			<a href="weather.html">
+				<div id="weather">
+					<div id = "cloud">
+					</div>
+				</div>
+			</a>
+			
+			
+			<a href="currency_converter.html">
+				<div id="currency">
+					<div class="icon">
+						<div class="calculator">
+							<div class="display"></div>
+							<div class="controls">&#10010;&nbsp; 
+								<span class="big">-</span> 
+								<br> &#10006;&nbsp; 
+								<span class="medium">=</span>
+							</div>
+    					</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  			
+			<a href="unit_converter.html">
+				<div id="measure">
+					<div class="icon">
+						<div class="ruler">
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			
+			<a href="phrase.html">
+				<div id="phrase">  
+					<div class="icon">
+						<div class="book">
+							<div class="top"></div>
+							<div class="pages">
+								<div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+							</div>
+							<span id="phrase-title">Phrases</span>
+							<div class="bookmark"></div>
+    					</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  			
+			<a href="advice.html">
+				<div id="advice">
+					<div class="icon">
+						<div class="map">
+							<div class="folded">
+								<div class="fold">
+									<div class="content"></div>
+        						</div>
+								<div class="fold">
+									<div class="content">
+										<div class="other"></div>
+          							</div>
+        						</div>
+								<div class="fold">
+									<div class="content"></div>
+        						</div>
+      						</div>
+	  					<div class="shadow"></div>
+	  					<div class="flip"></div>
+	  					<div class="pin"></div>
+    				</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  			<a href="useful-links.html">
+  				<div id="news" >
+					<div class="icon">
+						<div class="news">
+						  <div class="content"></div>
+						  <div class="flip"></div>
+						</div>
+					</div>
+				</div>
+			</a>  			
+  			
+			<a href="advice.html">
+				<div id="advice">
+					<div class="icon">
+						<div class="map">
+							<div class="folded">
+								<div class="fold">
+									<div class="content"></div>
+        						</div>
+								<div class="fold">
+									<div class="content">
+										<div class="other"></div>
+          							</div>
+        						</div>
+								<div class="fold">
+									<div class="content"></div>
+        						</div>
+      						</div>
+	  					<div class="shadow"></div>
+	  					<div class="flip"></div>
+	  					<div class="pin"></div>
+    				</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  						<a href="index.html">
+				<div id="home">
+					<h4>Home</h4>
+				</div>
+			</a>
+		</div>
+        
+        <!-- Clock Div -->
+        <div id="main-container">
+        
+        	<div id="language-select">
+				<p>Clock</p>
+				<p>Please select a time zone</p>
+			</div>
+
+		<!--drop down box, make London(GMT+0) default -->
+        <select id="Time" onChange="getMyTime()">
+			<option selected disabled value=''>Please select a time zone...</option>
+        	<option value="-12"> GMT-12 Auckland, AU </option>
+		    <option value="-11">GMT-11 Unalaska, US </option>
+		   	<option value="-10"> GMT-10 Honolulu, US </option>
+		   	<option value="-9"> GMT-9 Anchorage, US </option>
+		   	<option value="-8"> GMT-8 Los Angeles, US </option>
+		   	<option value="-7"> GMT-7 Denver, US </option>
+		   	<option value="-6"> GMT-6 Chicago, US </option>
+		   	<option value="-5"> GMT-5 New York City, US </option>
+		   	<option value="-4"> GMT-4 San Juan, PR</option>
+		   	<option value="-3"> GMT-3 Buenos Aires, AR </option>
+		   	<option value="-2"> GMT-2 Sao Paulo, BR  </option>
+		   	<option value="-1"> GMT-1 Cape Verde Islands </option>
+		   	<option value="0"> GMT+0 London, UK </option>
+		   	<option value="1"> GMT+1 Madrid, ES </option>
+		   	<option value="2"> GMT+2 Athens, GR </option>
+		   	<option value="3"> GMT+3 Kuwait City, KW </option>
+		   	<option value="4"> GMT+4 Moscow, RU </option>
+		   	<option value="5"> GMT+5 Dubai, AE </option>
+		   	<option value="6"> GMT+6 Islamabad, PK </option>
+		   	<option value="7"> GMT+7 Almaty, KZ </option>
+		   	<option value="8"> GMT+8 Bangkok, TH </option>
+		   	<option value="9"> GMT+9 Hong Kong, CH </option>
+		   	<option value="10"> GMT+10 Tokyo, JP </option>
+			<option value="11"> GMT+11 Sydnet, AU </option>
+			<option value="12"> GMT+12 Fiji </option>
+        </select>
+
+
+		<p id="currentDate">Date: </p>
+		<p id="currentTime">Time: </p>
+
+		
+		<br />
+		<button id="time-button" type="button" onClick="updateTime()">Update Time</button>    
+
+		</div>
+		<script>
+			function getMyTime(){
+				//creates default url if user selects value 0
+				var url = "http://www.timeapi.org/utc/now.json?callback=myCallback";
+				
+				//manipute url based on dropdown selsction
+				var x = document.getElementById("Time").value;
+				if(x>0)
+					url = "http://www.timeapi.org/utc/"+x+"+hours+from+now.json?callback=myCallback";
+				else if(x<0){
+					x = Math.abs(x);
+					url = "http://www.timeapi.org/utc/"+x+"+hours+ago.json?callback=myCallback";
+				}
+				
+				//write new script to run url and add it to the head
+				var script = document.createElement("script");
+				if(document.head.lastChild.nodeName == "SCRIPT")
+					document.head.removeChild(document.head.lastChild);
+				script.setAttribute("src", url);
+				document.head.appendChild(script);
+			}
+			
+			//wrapper function called when url is done
+			function myCallback(json) { 
+				var date = json.dateString;
+				ResultSplit(date);
+			} 
+			
+			//splits returned data into appropriate variables
+			//ex.  February 23, 2015 21:24:17 GMT+0000 -> should be response from webstie
+			function ResultSplit(textData) {
+				var day, month, year, minute, second;
+		    	var time = "";
+				var date = textData;
+				var n = textData.indexOf(" ");
+				month = textData.substring(0,n);
+				rest = textData.substring(n,textData.length);
+				var results = rest.split(",",2);
+				day = results[0];
+				rest = results[1];
+				year = rest.substring(1, 5);
+				time = rest.substring(6,14);
+				results = time.split(":",3);
+				hour = results[0];
+				minute = results[1];
+				second = results[2];
+			   	document.getElementById("currentDate").innerHTML = month+" "+day+", "+year;
+			    document.getElementById("currentTime").innerHTML = hour+":"+minute+":"+second;
+			    /*document.getElementById("currentDay").innerHTML = "Day: "+day;
+			    document.getElementById("currentMonth").innerHTML = "Month: "+month;
+			    document.getElementById("currentYear").innerHTML = "Year: "+year;
+			    document.getElementById("currentHour").innerHTML = "Hour: "+hour;
+			    document.getElementById("currentMinute").innerHTML = "Minute: "+minute;
+			    document.getElementById("currentSecond").innerHTML = "Second: "+second;*/
+			}
+			
+			function updateTime(){
+				if(document.head.lastChild.nodeName == "SCRIPT"){
+					var update = document.createElement("script");
+					update.setAttribute("src", document.head.lastChild.getAttribute("src"));
+					document.head.removeChild(document.head.lastChild);
+					document.head.appendChild(update);
+				}
+
+			}
+		</script>
+
+	</body> 
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Currency Converter</title>
+
+<link rel="stylesheet" type="text/css" href="style-small.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+
+
+
+		<div id="container">
+			
+           
+			<a href="clock.html">
+				<div id="clock">
+					<div class="icon">
+						<div class="clock">
+							<div class="circle"></div>
+							<div class="clockwise"></div>
+							<div class="shadows"></div>
+	    				</div>
+	  				</div>
+  				</div>
+  			</a>
+  			
+  			
+			<a href="weather.html">
+				<div id="weather">
+					<div id = "cloud">
+					</div>
+				</div>
+			</a>
+			
+			
+			<a href="currency_converter.html">
+				<div id="currency">
+					<div class="icon">
+						<div class="calculator">
+							<div class="display"></div>
+							<div class="controls">&#10010;&nbsp; 
+								<span class="big">-</span> 
+								<br> &#10006;&nbsp; 
+								<span class="medium">=</span>
+							</div>
+    					</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  			
+			<a href="unit_converter.html">
+				<div id="measure">
+					<div class="icon">
+						<div class="ruler">
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			
+			<a href="phrase.html">
+				<div id="phrase">  
+					<div class="icon">
+						<div class="book">
+							<div class="top"></div>
+							<div class="pages">
+								<div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+							</div>
+							<span id="phrase-title">Phrases</span>
+							<div class="bookmark"></div>
+    					</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  			
+			<a href="advice.html">
+				<div id="advice">
+					<div class="icon">
+						<div class="map">
+							<div class="folded">
+								<div class="fold">
+									<div class="content"></div>
+        						</div>
+								<div class="fold">
+									<div class="content">
+										<div class="other"></div>
+          							</div>
+        						</div>
+								<div class="fold">
+									<div class="content"></div>
+        						</div>
+      						</div>
+	  					<div class="shadow"></div>
+	  					<div class="flip"></div>
+	  					<div class="pin"></div>
+    				</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  			<a href="useful-links.html">
+  				<div id="news" >
+					<div class="icon">
+						<div class="news">
+						  <div class="content"></div>
+						  <div class="flip"></div>
+						</div>
+					</div>
+				</div>
+			</a>
+			
+						<a href="index.html">
+				<div id="home">
+					<h4>Home</h4>
+				</div>
+			</a>
+  			
+		</div>
+        
+        
+        <!-- Currency Converter -->
+    <div id="converter">
+        
+    	<div id="language-select">
+			<p>Currency Converter</p>
+			<p>Please select a type</p>
+		</div>
+        
+        <div id="leftCur">
+        <p> From: </p>
+			<!-- http://www.xe.com/iso4217.php -->
+			<select id="fromCur" onChange="getCurrency()">
+				<option value="AUD"> Australian Dollar </option>
+				<option value="CAD"> Canadian Dollar </option>
+				<option value="CHF"> Switzerland Franc </option>
+				<option value="EUR" selected> Euro </option> 
+				<option value="GBP"> Great Britain Pound </option>  
+				<option value="HKD"> Hong Kong Dollar </option>
+				<option value="INR"> Indian Rupee </option>
+				<option value="JPY"> Japanese Yen </option>
+				<option value="MXN"> Mexican Peso </option> 
+				<option value="RUB"> Russia Ruble </option>    
+				<option value="PKR"> Pakistan Rupee </option>    
+            	<option value="USD"> US Dollar </option>
+				<option value="ZAR"> South Africa Rand </option>
+            </select>
+		<p> Amount: </p> <input type="textfield" value="0" id = "amount" onChange="getCurrency()">
+        </div>
+        
+        
+        <div id=rightCur>
+         <p> To: </p>
+            <select id="toCur" onChange="getCurrency()">
+				<option value="AUD"> Australian Dollar </option>
+				<option value="CAD"> Canadian Dollar </option>
+				<option value="CHF"> Switzerland Franc </option>
+				<option value="EUR"> Euro </option> 
+				<option value="GBP"> Great Britain Pound </option>  
+				<option value="HKD"> Hong Kong Dollar </option>
+				<option value="INR"> Indian Rupee </option>
+				<option value="JPY"> Japaneese Yen </option>
+				<option value="MXN"> Mexican Peso </option> 
+				<option value="RUB"> Russia Ruble </option>    
+				<option value="PKR"> Pakistan Rupee </option>    
+		       	<option value="USD" selected> US Dollar </option>
+				<option value="ZAR"> South Africa Rand </option>            
+			</select>
+		<br />
+       <!-- <button type="button" onclick="getCurrency()">Convert</button>   -->
+		<p> Amount: </p> <input type="textfield" value="" id = "answer" readonly>
+        </div>
+		</div>
+
+	<script> 
+		function getCurrency(){
+			//create URL based on user selections and create new script
+			var url = "http://www.freecurrencyconverterapi.com/api/v3/convert?q="+document.getElementById("fromCur").value+"_"+document.getElementById("toCur").value+"&compact=y&callback=myCallback"
+			var script = document.createElement("script");
+			if(document.head.lastChild.nodeName == "SCRIPT")
+				document.head.removeChild(document.head.lastChild)
+			script.setAttribute("src", url);
+			document.head.appendChild(script);
+		}
+		
+		function myCallback(json) { 
+			var results = document.getElementById("fromCur").value+"_"+document.getElementById("toCur").value
+			var rate = json[results].val;
+			var conversion = document.getElementById("amount").value*rate;
+			conversion = Math.round(conversion * 10000) / 10000; //rounds value to 5 decimals
+			document.getElementById("answer").setAttribute("value", conversion);
+		} 
+		
+	</script>
+        
+</body>
+</html>

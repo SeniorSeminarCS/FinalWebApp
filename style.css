@@ -1,0 +1,599 @@
+
+
+/*-----------LARGE SCREEN---------------*/
+@media screen and (min-width: 400px) {
+	html, body {
+		height:100%;
+		width:100%;
+		text-align:center;
+	}
+	
+	/*--------------WEATHER PAGE-----------------*/
+	#main-container {
+		width: 60%;
+		height: 95%;
+		margin: 0 auto;
+		background: #3388ee;
+		border-radius: 10px;
+		overflow:scroll;
+	}
+	#main-container h1 {
+		font-size: 2.3em;
+		font-family: "Gill Sans";
+		font-weight: 300;
+		text-align: center;
+		color:#FF9;
+	}
+	
+	.weather-text {
+		text-align:center;
+		color:#FF9;
+		font-family: "Gill Sans";
+	}
+
+	#weather-city-box {
+		text-align:center;
+	}
+	#weather-city-box input{
+		height: 6%;
+	}
+	#weather-city-box input[type="text"]{
+		font-size: 1.5em;
+		color:#bbbbbb;
+	}
+	
+	.conditions-box {
+		margin: 0 auto;
+		margin-bottom:10px;
+		width: 70%;
+		min-height:5%;
+		border: 1px solid white;
+		font-size:1.3em;
+		background:#d3d3d3;
+		border-radius: 10px;
+	}
+	.conditions-box p {
+		margin-left: 15%;
+	}
+
+	#weather-city-box {
+		text-align:center;
+	}
+	#weather-city-box input{
+		height: 6%;
+	}
+	.conditions-box {
+		margin:auto;
+		margin-bottom:10px;
+		width: 75%;
+		min-height:5%;
+		border: 1px solid white;
+		font-size:1.3em;
+		background-color:#65cdef;
+		border-radius: 10px;
+	
+	}
+	
+	.conditions-box p {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	
+	#right {
+		float:right;
+		margin-bottom:10px;
+		width: 40%;
+		min-height:5%;
+		border: 1px solid white;
+		font-size:1.3em;
+		background-color:#65cdef;
+		border-radius: 10px;
+		margin-right:40px;
+	
+	}
+	
+	#left {
+		float:left;
+		margin-bottom:10px;
+		width: 40%;
+		min-height:5%;
+		border: 1px solid white;
+		font-size:1.3em;
+		background-color:#65cdef;
+		border-radius: 10px;
+		margin-left:40px;
+	
+	
+	}
+	
+	
+	input[type="button"] {
+		background:#aaccff;
+		border-radius:10px;
+		border: 1px solid #aaccff;
+		height:40px;
+		margin: 0 auto;
+		font-size: 1.3em;
+	}
+	input[type="button"]:hover {
+		 box-shadow: 1px 1px 20px yellow;
+	}
+	#button-box {
+		margin-top: 10px;
+		text-align:center;
+	}
+	input[type="button"] {
+		background:#aaccff;
+		border-radius:10px;
+		height:40px;
+		margin: 0 auto;
+		font-size: 1.3em;
+	}
+	#button-box {
+		margin-top: 10px;
+		text-align:center;
+	}
+
+
+
+
+/*--------------CLOCK PAGE-----------------*/
+
+
+	#main-container input[type="button"]{
+		padding:10px;
+		background:#FF9;
+		color:#36f;
+		font-size:16px;
+	}
+
+
+	#main-container input[type="reset"]{
+		padding:10px;
+		background:#FF9;
+		color:#36f;
+		font-size:16px;
+	}
+	
+	#Time {
+		background-color: transparent;
+		width: 40%;
+		height: 7%;
+		font-size: 1.2em;
+		font-family: "Gill Sans";
+	}
+	#time-button {
+		background:#FF9;;
+		border-radius:10px;
+		height:8%;
+		width: 25%;
+		margin: 0 auto;
+		font-size: 1.3em;
+		border: 1px solid #ff9;
+		box-shadow: 1px 1px 10px #FF9;
+	}
+	#time-button:hover {
+		box-shadow: 1px 1px 15px #FF9;
+	}
+
+	
+	
+	/*--------------UNIT CONVERTER PAGE-----------------*/
+	#converter{
+		width: 60%;
+		height: 95%;
+		margin: 0 auto;
+		background: #3388ee;
+		border-radius: 10px;
+		overflow:scroll;
+	}
+
+	#converter input[type="button"]{
+		padding:10px;
+		background:#FF9;
+		color:#36f;
+		font-size:16px;	
+	}
+
+
+	#converter input[type="reset"]{
+		padding:10px;
+		background:#FF9;
+		color:#36f;
+		font-size:16px;
+	}
+
+	
+	#unitType, #field1, #field2 {
+		background-color: transparent;
+		width: 40%;
+		height: 7%;
+		font-size: 1.2em;
+		font-family: "Gill Sans";
+	}
+	
+	#ans1, #ans2 {
+		width: 30%;
+		height: 50px;
+		font-size: 2.2em;
+	}
+	.measure-text {
+		font: "Gill Sans";
+	}
+	
+	
+	/*--------------PHRASEBOOK PAGE-----------------*/	
+	.phrase-box {
+		width: 600px;
+		height: 600px;
+		margin: 0 auto;
+		background: #36F;
+		border-radius: 10px;
+
+		overflow:scroll;
+		
+	}
+	
+	#language-select {
+		margin: 0 auto;
+		width: 90%;
+		height: 20%;
+		margin-top: 2%;
+		border-radius: 100px;
+		
+	}
+	
+	#language-select p {
+		font-size: 2.3em;
+		font-family: "Gill Sans";
+		font-weight: 300;
+		text-align: center;
+		color:#FF9;
+	}
+	#language-select p:nth-child(2) {
+		font-size:1.2em;
+		font-weight:500;
+		margin-top: -20px;
+	}
+	
+	
+	.lang-check-container {
+		margin-bottom: 10px;
+		text-align: center;
+		margin-top: 23px;
+		
+	}
+	
+	.lang-check-container select {
+		padding:10px;
+		text-align:center;	
+		background: #f9f46c;
+		color:black;
+	}
+	
+	#lang-check {
+		width:40%;
+		margin-top: -20px;
+	}
+	
+	#spanish-phrases, #italian-phrases, #french-phrases {
+		margin: 0 auto;
+		border: 1px solid white;
+	}
+	
+	
+	
+	#spanish-phrases thead, #spanish-phrases td, #italian-phrases thead, #italian-phrases td, #french-phrases thead, #french-phrases td {
+		font-family:"Gill Sans";
+		font-style: italic;
+		line-height: 30px;
+		color: #020531;
+
+	}
+	
+	#spanish-phrases td , #italian-phrases td, #french-phrases td {
+		border: 1px solid white;
+		background-color:#65cdef;
+	}
+	
+	
+	
+	
+/*--------------CURRENCY PAGE-----------------*/	
+	#fromCur, #toCur {
+		background-color: transparent;
+		width: 40%;
+		height: 7%;
+		font-size: 1.2em;
+		font-family: "Gill Sans";
+	}
+	
+	#amount, #answer {
+		width: 20%;
+		height: 50px;
+		font-size: 2.2em;
+	}
+	
+	#useful-links-container a {
+		font-family: "Gill Sans";
+		font-size: 1.3em;
+		text-decoration:none;
+	}
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*						MOBILE DEVICE/SMALL DEVICE							*/
+@media screen and (max-width: 500px) {
+	
+	
+	
+	/* ------------------------WEATHER PAGE ------------------------*/
+	#main-container {
+		width: 300px;
+		height: 400px;
+		margin: 0 auto;
+		background: #3388ee;
+		border-radius: 10px;
+		overflow:scroll;
+	}
+
+	#weather-city-box {
+		text-align:center;
+	}
+	#weather-city-box input{
+		height: 40px;
+	}
+	#weather-city-box input[type="text"]{
+		font-size: 1.3em;
+		color:#bbbbbb;
+	}
+	
+	.conditions-box {
+		margin: 0 auto;
+		margin-bottom:10px;
+		width: 70%;
+		min-height: 4%;
+		border: 1px solid white;
+		font-size:.9em;
+		background:#55ccff;
+		border-radius: 10px;
+	}
+	.conditions-box p {
+		margin-left: 15%;
+	}
+	#current-weather-info {
+		font-family: "Gill Sans";
+		font-size:1.1em;
+		padding:30px;
+	}
+	
+	input[type="button"] {
+		background:#aaccff;
+		border-radius:10px;
+		height:40px;
+		border:3px solid white;
+		margin: 0 auto;
+		font-size: 1.1em;
+	}
+	#button-box {
+		margin-top: 10px;
+		text-align:center;
+	}
+	
+
+
+
+	/*--------------CLOCK PAGE-----------------*/
+	#worldclock{
+		background:#36F;
+		border-radius: 10px;
+		width: 300px;
+		height:400px;
+		margin: 0 auto;
+		color:#ff6;
+		text-align:center;
+		font-size:20px;
+		overflow:scroll;
+	
+	}
+
+	#worldclock input[type="button"]{
+		padding:10px;
+		background:#FF9;
+		color:#36f;
+		font-size:16px;
+	}
+
+
+	#worldclock input[type="reset"]{
+		padding:10px;
+		background:#FF9;
+		color:#36f;
+		font-size:16px;
+	}
+
+	
+	
+	
+	/*--------------UNIT CONVERTER PAGE-----------------*/
+	#converter{
+		background:#36F;
+		border-radius: 10px;
+		width: 300px;
+		height:400px;
+		margin: 0 auto;
+		color:#ff6;
+		text-align:center;
+		font-size:20px;
+		overflow:scroll;
+		border-radius: 10px;
+		font-family:bantag, Verdana, Geneva, sans-serif;
+	
+	}
+
+	#converter input[type="button"]{
+		padding:10px;
+		background:#FF9;
+		color:#36f;
+		font-size:16px;	
+	}
+
+
+	#converter input[type="reset"]{
+		padding:10px;
+		background:#FF9;
+		color:#36f;
+		font-size:16px;
+	}
+
+	#converter a:link{
+		text-align:center;
+		font-size: 20px;
+		color:#FF6;
+	}
+
+	#converter a:visited{
+		text-align:center;
+		font-size: 20px;
+		color:#d3d3d3;
+	}
+
+	#converter a:hover{
+		color:#f4f414;
+		text-align:center;
+		font-size: 20px;
+	}
+
+	#converter ul{
+		text-align:left;
+		font-size:18px;
+	}
+
+	#top-header{
+		margin: 0 auto;
+		width: 90%;
+		height: 20%;
+		background: #333314;
+		margin-top: 2%;
+		border-radius: 100px;
+		color:#FF9;
+		
+	}
+
+
+
+
+	/*--------------PHRASEBOOK PAGE-----------------*/
+	.phrase-box {
+		width: 300px;
+		height: 400px;
+		margin: 0 auto;
+		background: #36F;
+		border-radius: 10px;
+		overflow:scroll;
+	}
+	
+	#language-select {
+		margin: 0 auto;
+		width: 90%;
+		height: 20%;
+		margin-top: 2%;
+		border-radius: 100px;
+		color:#FF9;
+	}
+	
+	#language-select p {
+		font-size: 1.8em;
+		font-family: "Gill Sans";
+		font-weight: 300;
+		text-align: center;
+	}
+	#language-select p:nth-child(2) {
+		font-size:.9em;
+		font-weight:500;
+		margin-top: -20px;
+	}
+	
+	
+	.lang-check-container {
+		margin-bottom: 10px;
+		text-align: center;
+		margin-top: 23px;
+	}
+	
+	.lang-check-container select {
+		padding:10px;
+		text-align:center;	
+		background:transparent;
+		box-shadow: 0px 0px 70px white;
+		color:#ff6;
+	}
+	
+	#lang-check {
+		width:40%;
+		margin-top: -20px;
+	}
+	
+	#spanish-phrases, #italian-phrases, #french-phrases {
+		margin: 0 auto;
+		border: 1px solid white;
+	}
+	
+	
+	
+	#spanish-phrases thead, #spanish-phrases td, #italian-phrases thead, #italian-phrases td, #french-phrases thead, #french-phrases td {
+		font-family:"Gill Sans";
+		font-style: italic;
+		line-height: 30px;
+		color:#ff6;
+
+	}
+	
+	#spanish-phrases td , #italian-phrases td, #french-phrases td {
+		border: 1px solid white;
+		background:#343414;
+	}
+
+
+}
+	

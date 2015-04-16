@@ -1,0 +1,204 @@
+<!DOCTYPE> 
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Unit Converter</title>
+
+<link rel="stylesheet" type="text/css" href="style-small.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src = "unit_converter.js"></script>
+
+</head>
+	<body> 
+
+		<div id="container">
+			
+			<a href="clock.html">
+				<div id="clock">
+					<div class="icon">
+						<div class="clock">
+							<div class="circle"></div>
+							<div class="clockwise"></div>
+							<div class="shadows"></div>
+	    				</div>
+	  				</div>
+  				</div>
+  			</a>
+  			
+  			
+			<a href="weather.html">
+				<div id="weather">
+					<div id = "cloud">
+					</div>
+				</div>
+			</a>
+			
+			
+			<a href="currency_converter.html">
+				<div id="currency">
+					<div class="icon">
+						<div class="calculator">
+							<div class="display"></div>
+							<div class="controls">&#10010;&nbsp; 
+								<span class="big">-</span> 
+								<br> &#10006;&nbsp; 
+								<span class="medium">=</span>
+							</div>
+    					</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  			
+			<a href="unit_converter.html">
+				<div id="measure">
+					<div class="icon">
+						<div class="ruler">
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			
+			<a href="phrase.html">
+				<div id="phrase">  
+					<div class="icon">
+						<div class="book">
+							<div class="top"></div>
+							<div class="pages">
+								<div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+						        <div class="page"></div>
+							</div>
+							<span id="phrase-title">Phrases</span>
+							<div class="bookmark"></div>
+    					</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  			
+			<a href="advice.html">
+				<div id="advice">
+					<div class="icon">
+						<div class="map">
+							<div class="folded">
+								<div class="fold">
+									<div class="content"></div>
+        						</div>
+								<div class="fold">
+									<div class="content">
+										<div class="other"></div>
+          							</div>
+        						</div>
+								<div class="fold">
+									<div class="content"></div>
+        						</div>
+      						</div>
+	  					<div class="shadow"></div>
+	  					<div class="flip"></div>
+	  					<div class="pin"></div>
+    				</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  			<a href="useful-links.html">
+  				<div id="news" >
+					<div class="icon">
+						<div class="news">
+						  <div class="content"></div>
+						  <div class="flip"></div>
+						</div>
+					</div>
+				</div>
+			</a>
+  			
+			<a href="advice.html">
+				<div id="advice">
+					<div class="icon">
+						<div class="map">
+							<div class="folded">
+								<div class="fold">
+									<div class="content"></div>
+        						</div>
+								<div class="fold">
+									<div class="content">
+										<div class="other"></div>
+          							</div>
+        						</div>
+								<div class="fold">
+									<div class="content"></div>
+        						</div>
+      						</div>
+	  					<div class="shadow"></div>
+	  					<div class="flip"></div>
+	  					<div class="pin"></div>
+    				</div>
+  					</div>
+  				</div>
+  			</a>
+  			
+  						<a href="index.html">
+				<div id="home">
+					<h4>Home</h4>
+				</div>
+			</a>
+		</div>
+        
+        <!-- Unit Converter Div -->
+        
+        <div id="converter">
+        
+            <div id="language-select">
+				<p>Unit Converter</p>
+				<p>Please select a type</p>
+			</div>
+        
+        
+        <form name="calculator" >
+
+		<br />
+		<select id = "unitType" onchange = typeSelected()>
+			<option selected disabled value=''>Unit Type</option>
+			<option value = "0">Length</option>
+			<option value = "1">Mass</option>
+			<option value = "2">Volume</option>
+			<option value = "3">Temperature</option>
+		</select>
+		
+		<div id = "units" style = "visibility: hidden">
+		<br />
+		<span class="measure-text">From:</span>
+		<select  id = "field1" onchange = calculate()></select>	
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<span class="measure-text">To:</span>
+		<select  id = "field2" onchange = calculate()></select>
+		<br /><br><br><br><br>
+		<input type = "textfield" name = "ans1" id = "ans1" value = "0" onchange = calculate()>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<input type = "textfield" name = "ans2" id = "ans2" value = "0" readonly>
+
+	</div>
+	
+	</form>
+ 	</div>       
+
+	</body> 
+</html>
